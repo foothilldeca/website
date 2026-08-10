@@ -1,4 +1,4 @@
-// Ported verbatim from ui_kits/website/Hero.jsx — inline styles & CSS values
+// Ported verbatim from ui_kits/website/Hero.jsx; inline styles & CSS values
 // unchanged; only the window-global / Lucide plumbing is swapped for imports.
 
 // Colorful segmented bar across the bottom of the hero (DECA homepage motif)

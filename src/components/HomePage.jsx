@@ -1,4 +1,4 @@
-// Ported verbatim from ui_kits/website/HomePage.jsx — inline styles & CSS
+// Ported verbatim from ui_kits/website/HomePage.jsx; inline styles & CSS
 // values unchanged; only the window-global / Lucide plumbing is swapped.
 
 import { Section, Eyebrow, Icon, Button, DiamondWatermark } from "./primitives.jsx";
@@ -47,7 +47,7 @@ export function HomePage({ onNavigate }) {
     <>
       <Hero onNavigate={onNavigate} />
 
-      {/* Get Involved — text columns on blue (DECA style) */}
+      {/* Get Involved: text columns on blue (DECA style) */}
       <section style={{ background: "linear-gradient(125deg, #0a86ff 0%, #0072CE 38%, #00396f 100%)", position: "relative", overflow: "hidden" }}>
         <img src="/assets/deca-diamond-white.png" alt="" aria-hidden="true"
           style={{ position: "absolute", right: -120, bottom: -120, width: 460, opacity: .07 }} />
@@ -70,7 +70,7 @@ export function HomePage({ onNavigate }) {
         </div>
       </section>
 
-      {/* Community — deca.org-style split card (navy text panel + full-bleed photo) */}
+      {/* Community: deca.org-style split card (navy text panel + full-bleed photo) */}
       <Section>
         <div className="community-card" style={{
           display: "grid", gridTemplateColumns: "minmax(0,0.92fr) minmax(0,1.08fr)",

@@ -1,4 +1,4 @@
-// Ported verbatim from ui_kits/website/Pages.jsx (ContactPage) — inline styles
+// Ported verbatim from ui_kits/website/Pages.jsx (ContactPage); inline styles
 // & CSS values unchanged; only the window-global / Lucide plumbing is swapped.
 
 import { useForm, ValidationError } from "@formspree/react";

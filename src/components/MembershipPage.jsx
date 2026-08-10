@@ -1,4 +1,4 @@
-// Ported verbatim from ui_kits/website/Pages.jsx (MembershipPage) — inline
+// Ported verbatim from ui_kits/website/Pages.jsx (MembershipPage); inline
 // styles & CSS values unchanged; only the window-global / Lucide plumbing is
 // swapped for ES imports.
 
@@ -60,7 +60,7 @@ export function MembershipPage({ onNavigate }) {
   return (
     <>
       <PageBanner eyebrow="Get Involved" title="Become a Member"
-        subtitle="Membership is open to every Foothill student. Here's what you get — and how to join." />
+        subtitle="Membership is open to every Foothill student. Here's what you get and how to join." />
 
       <Section tint>
         <div className="bene-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "var(--gap-grid)" }}>

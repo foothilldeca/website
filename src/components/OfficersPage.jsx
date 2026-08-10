@@ -1,4 +1,4 @@
-// Ported verbatim from ui_kits/website/OfficersPage.jsx — inline styles & CSS
+// Ported verbatim from ui_kits/website/OfficersPage.jsx; inline styles & CSS
 // values unchanged; only the window-global / Lucide plumbing is swapped.
 
 import { Section, Icon, DiamondWatermark } from "./primitives.jsx";

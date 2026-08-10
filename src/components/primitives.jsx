@@ -1,5 +1,5 @@
 // Shared primitives for the Foothill DECA website UI kit.
-// Ported from ui_kits/website/components.jsx — inline styles verbatim;
+// Ported from ui_kits/website/components.jsx; inline styles verbatim;
 // only the Lucide-CDN plumbing is swapped for the lucide-react package.
 
 import { icons } from "lucide-react";

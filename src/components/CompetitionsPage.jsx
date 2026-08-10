@@ -1,18 +1,18 @@
-// Competitions page — conference list styled after California DECA's layout
+// Competitions page: conference list styled after California DECA's layout
 // (image left, details + Learn More right) but kept in the Foothill DECA theme:
 // blue accents, rounded corners, soft shadows (no orange / square edges).
 
 import { Section } from "./primitives.jsx";
 import { PageBanner } from "./OfficersPage.jsx";
 
-// Each conference. `photo` is optional — drop a file in /assets and set the
+// Each conference. `photo` is optional; drop a file in /assets and set the
 // path. `href` is the external conference page the "Learn More" button opens.
 const CONFERENCES = [
   {
     name: "MiniCon",
     when: "Date TBA",
     where: "Foothill High School · Pleasanton, CA",
-    desc: "Minicon is an excellent opportunity for students who have never done DECA — predominantly freshmen in the lunchtime group — or first-year ROP class members to practice their business roleplay skills before heading to NorCal and State. Competitors complete a 50-question general knowledge DECA exam as well as one roleplay. If you've never done DECA before, or it's your first year in an ROP class, we highly recommend participating in Minicon.",
+    desc: "Minicon is an excellent opportunity for students who have never done DECA, predominantly freshmen in the lunchtime group, or first-year ROP class members to practice their business roleplay skills before heading to NorCal and State. Competitors complete a 50-question general knowledge DECA exam as well as one roleplay. If you've never done DECA before, or it's your first year in an ROP class, we highly recommend participating in Minicon.",
     href: "#",
     photo: "/assets/minicon.jpg",
   },

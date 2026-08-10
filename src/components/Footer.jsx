@@ -1,4 +1,4 @@
-// Ported verbatim from ui_kits/website/Footer.jsx — inline styles unchanged;
+// Ported verbatim from ui_kits/website/Footer.jsx; inline styles unchanged;
 // only the window-global / Lucide plumbing is swapped for imports.
 
 import { Icon, Button } from "./primitives.jsx";

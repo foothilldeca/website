@@ -1,4 +1,4 @@
-// Classes page — Foothill's ROP / CTE business courses. Layout modeled on
+// Classes page: Foothill's ROP / CTE business courses. Layout modeled on
 // deca.org's split sections (pill eyebrow + heading + copy beside a rounded
 // photo, alternating sides) but kept in the Foothill DECA theme.
 
@@ -97,8 +97,8 @@ export function ClassesPage() {
         <p style={para}>
           Learn the process of starting and managing a business. Students with an entrepreneurial interest
           build skills in organization, effective decision making, and goal setting. They develop comprehensive
-          business plans — including research and development of ideas, product planning, finance, and
-          marketing — and research how marketing, management, ethics, and communication drive business success.
+          business plans that include research and development of ideas, product planning, finance, and
+          marketing. They also research how marketing, management, ethics, and communication drive business success.
           Students gain practical experience by managing a student-run business and receive training
           constructing resumes, employment applications, cover letters, references, and interviewing skills.
         </p>

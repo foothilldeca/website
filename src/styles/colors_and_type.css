@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Foothill DECA — Colors & Type Foundations
+   Foothill DECA: Colors & Type Foundations
    Single source of truth for color + typography tokens.
    Import in any page:  <link rel="stylesheet" href="colors_and_type.css">
    ========================================================================== */
@@ -97,7 +97,7 @@
 }
 
 /* ==========================================================================
-   Semantic element defaults — opt in by importing this file.
+   Semantic element defaults; opt in by importing this file.
    ========================================================================== */
 body {
   font-family: var(--font-sans);
