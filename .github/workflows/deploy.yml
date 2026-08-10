@@ -38,12 +38,6 @@ jobs:
       - name: Build website
         run: npm run build
 
-        run: |
-          find dist/assets -maxdepth 1 -name '*.js' -exec perl -pi -e 's#/assets/#/website/assets/#g' {} +
-          find dist/assets -maxdepth 1 -name '*.css' -exec perl -pi -e 's#/fonts/#/website/fonts/#g' {} +
-          perl -pi -e 's#href="/favicon#href="/website/favicon#g; s#href="/apple-touch#href="/website/apple-touch#g; s#href="/site\.webmanifest#href="/website/site.webmanifest#g' dist/index.html
-          perl -pi -e 's#"/android-chrome-#"/website/android-chrome-#g' dist/site.webmanifest
-
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
