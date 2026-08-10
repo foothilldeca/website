@@ -1,0 +1,58 @@
+name: Deploy Foothill DECA website
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build website
+        run: npm run build -- --base=/website/
+
+      - name: Fix image and font paths
+        run: |
+          find dist/assets -maxdepth 1 -name '*.js' -exec perl -pi -e 's#/assets/#/website/assets/#g' {} +
+          find dist/assets -maxdepth 1 -name '*.css' -exec perl -pi -e 's#/fonts/#/website/fonts/#g' {} +
+          perl -pi -e 's#href="/favicon#href="/website/favicon#g; s#href="/apple-touch#href="/website/apple-touch#g; s#href="/site\.webmanifest#href="/website/site.webmanifest#g' dist/index.html
+          perl -pi -e 's#"/android-chrome-#"/website/android-chrome-#g' dist/site.webmanifest
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
