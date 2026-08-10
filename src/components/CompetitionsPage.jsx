@@ -12,7 +12,7 @@ const CONFERENCES = [
     name: "MiniCon",
     when: "Date TBA",
     where: "Foothill High School · Pleasanton, CA",
-    desc: "Your first taste of DECA competition — a local mini conference held right here at Foothill, where you practice roleplays and exams and get conference-ready before districts.",
+    desc: "Minicon is an excellent opportunity for students who have never done DECA — predominantly freshmen in the lunchtime group — or first-year ROP class members to practice their business roleplay skills before heading to NorCal and State. Competitors complete a 50-question general knowledge DECA exam as well as one roleplay. If you've never done DECA before, or it's your first year in an ROP class, we highly recommend participating in Minicon.",
     href: "#",
     photo: "/assets/minicon.jpg",
   },
