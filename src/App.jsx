@@ -1,8 +1,4 @@
-// App shell ported from ui_kits/website/index.html. Only the Home page is in
-// scope for this port; nav state is preserved so the Header highlight and
-// scroll-to-top behavior match, and other routes fall back to Home for now.
-
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Header } from "./components/Header.jsx";
 import { Footer } from "./components/Footer.jsx";
 import { HomePage } from "./components/HomePage.jsx";
@@ -12,12 +8,57 @@ import { MembershipPage } from "./components/MembershipPage.jsx";
 import { CompetitionsPage } from "./components/CompetitionsPage.jsx";
 import { ClassesPage } from "./components/ClassesPage.jsx";
 
+const pageAliases = {
+  home: "home",
+  about: "home",
+  competitions: "competitions",
+  officers: "officers",
+  classes: "classes",
+  training: "classes",
+  membership: "membership",
+  contact: "contact",
+};
+
+const pagePaths = {
+  home: "/",
+  competitions: "/competitions",
+  officers: "/officers",
+  classes: "/classes",
+  membership: "/membership",
+  contact: "/contact",
+};
+
+const pathPages = Object.fromEntries(
+  Object.entries(pagePaths).map(([page, path]) => [path, page]),
+);
+
+function pageFromPath(pathname) {
+  const normalized = pathname.replace(/\/+$/, "") || "/";
+  return pathPages[normalized] || "home";
+}
+
 export default function App() {
-  const [page, setPage] = useState("home");
+  const [page, setPage] = useState(() => pageFromPath(window.location.pathname));
+
+  useEffect(() => {
+    const handlePopState = () => {
+      setPage(pageFromPath(window.location.pathname));
+      window.scrollTo({ top: 0, behavior: "auto" });
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
   const navigate = (id) => {
-    const map = { home: "home", about: "home", competitions: "competitions",
-      officers: "officers", classes: "classes", training: "classes", membership: "membership", contact: "contact" };
-    setPage(map[id] || "home");
+    const nextPage = pageAliases[id] || "home";
+    const nextPath = pagePaths[nextPage];
+
+    if (window.location.pathname !== nextPath) {
+      window.history.pushState({ page: nextPage }, "", nextPath);
+    }
+
+    setPage(nextPage);
     window.scrollTo({ top: 0, behavior: "auto" });
   };
 
