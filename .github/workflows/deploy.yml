@@ -36,9 +36,8 @@ jobs:
         run: npm ci
 
       - name: Build website
-        run: npm run build -- --base=/website/
+        run: npm run build
 
-      - name: Fix image and font paths
         run: |
           find dist/assets -maxdepth 1 -name '*.js' -exec perl -pi -e 's#/assets/#/website/assets/#g' {} +
           find dist/assets -maxdepth 1 -name '*.css' -exec perl -pi -e 's#/fonts/#/website/fonts/#g' {} +
