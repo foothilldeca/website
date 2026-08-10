@@ -1,0 +1,18 @@
+# dependencies
+node_modules
+
+# build output
+dist
+
+# vercel
+.vercel
+
+# local editor and agent configuration
+.claude/
+
+# local backups (kept on disk, not deployed)
+public/assets/originals
+
+# misc
+.DS_Store
+*.log

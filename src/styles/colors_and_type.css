@@ -1,0 +1,138 @@
+/* ==========================================================================
+   Foothill DECA — Colors & Type Foundations
+   Single source of truth for color + typography tokens.
+   Import in any page:  <link rel="stylesheet" href="colors_and_type.css">
+   ========================================================================== */
+
+/* ---- Webfonts -------------------------------------------------------------
+   Per DECA Brand Guidelines (p.10):
+   Official typeface  = Gotham Bold  (logo + display/headings; self-hosted).
+   Secondary typeface = Source Sans Pro (sub-titles, subheadings, body, lengthy text).
+   --------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham_Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ----- Brand color scale (DECA Blue) -----
+     Primary = official DECA Blue, PMS 285 C / RGB 0,114,206 (Brand Guidelines p.10).
+     Darker/lighter steps are derived UI shades for depth, hover and tints. */
+  --deca-blue:        #0072CE;  /* primary brand blue (official) */
+  --deca-blue-dark:   #00549E;  /* hover / depth / gradient end */
+  --deca-blue-darker: #003B6F;  /* deepest shade, footers */
+  --deca-blue-light:  #E6F2FB;  /* subtle tinted backgrounds */
+  --deca-blue-mid:    #3392DC;  /* gradient mid / lighter accents */
+
+  /* ----- Brand accent metals (logo single-color options, Brand Guidelines p.10) ----- */
+  --deca-gold:   #85754E;  /* PMS 871 C metallic gold */
+  --deca-silver: #8C9091;  /* PMS 877 C metallic silver */
+
+  /* ----- Neutrals ----- */
+  --white:    #FFFFFF;
+  --gray-50:  #F5F5F5;  /* alternating section background */
+  --gray-100: #ECECEC;  /* hairline borders, dividers */
+  --gray-200: #D9D9D9;  /* input borders */
+  --gray-400: #999999;  /* muted text, captions */
+  --gray-600: #666666;  /* secondary body text */
+  --gray-800: #333333;  /* primary body text */
+  --black:    #1A1A1A;
+
+  /* ----- Semantic color roles ----- */
+  --color-bg:           var(--white);
+  --color-bg-alt:       var(--gray-50);
+  --color-bg-tint:      var(--deca-blue-light);
+  --color-fg:           var(--gray-800);   /* body copy */
+  --color-fg-muted:     var(--gray-600);   /* secondary copy */
+  --color-fg-subtle:    var(--gray-400);   /* captions */
+  --color-heading:      var(--deca-blue-darker);
+  --color-link:         var(--deca-blue);
+  --color-link-hover:   var(--deca-blue-dark);
+  --color-border:       var(--gray-100);
+  --color-border-input: var(--gray-200);
+  --color-accent:       var(--deca-blue);
+  --color-on-brand:     var(--white);      /* text on blue surfaces */
+
+  /* ----- Brand gradient ----- */
+  --gradient-hero: linear-gradient(135deg, #0072CE 0%, #00599F 55%, #003B6F 100%);
+  --gradient-card: linear-gradient(135deg, #0072CE 0%, #00549E 100%);
+
+  /* ----- Typography ----- */
+  /* Body / UI: Source Sans Pro (official secondary typeface). */
+  --font-sans: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  /* Display / headings: Gotham Bold (official typeface), falling back to Source Sans. */
+  --font-display: 'Gotham', 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-black:    800;
+
+  /* Type scale (desktop) */
+  --fs-display: 64px;  /* hero on large screens */
+  --fs-h1:      48px;
+  --fs-h2:      36px;
+  --fs-h3:      28px;
+  --fs-h4:      22px;
+  --fs-lead:    20px;  /* subheadlines / lead paragraphs */
+  --fs-body:    16px;
+  --fs-small:   14px;
+  --fs-caption: 13px;
+  --fs-eyebrow: 13px;  /* uppercase label */
+
+  --lh-tight:   1.1;
+  --lh-snug:    1.25;
+  --lh-normal:  1.5;
+  --lh-relaxed: 1.65;
+
+  --ls-tight:   -0.02em;
+  --ls-normal:  0;
+  --ls-wide:    0.08em;  /* eyebrows / uppercase nav */
+}
+
+/* ==========================================================================
+   Semantic element defaults — opt in by importing this file.
+   ========================================================================== */
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-relaxed);
+  color: var(--color-fg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  color: var(--color-heading);
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  text-wrap: balance;
+  margin: 0;
+}
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); font-weight: var(--fw-semibold); }
+h4 { font-size: var(--fs-h4); font-weight: var(--fw-semibold); }
+
+p { margin: 0; text-wrap: pretty; }
+
+.eyebrow {
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.lead { font-size: var(--fs-lead); line-height: var(--lh-normal); color: var(--color-fg-muted); }
+
+a { color: var(--color-link); text-decoration: none; }
+a:hover { color: var(--color-link-hover); }
