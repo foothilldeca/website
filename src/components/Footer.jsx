@@ -5,7 +5,7 @@ import { Icon, Button } from "./primitives.jsx";
 
 export function Footer({ onNavigate }) {
   const cols = [
-    ["Explore", [["Competitions", "competitions"], ["Officer Team", "officers"], ["Classes", "classes"]]],
+    ["Explore", [["Shark Tank", "sharkTank"], ["Competitions", "competitions"], ["Officer Team", "officers"], ["Classes", "classes"]]],
   ];
   return (
     <footer style={{ background: "var(--deca-blue-darker)", color: "#fff" }}>

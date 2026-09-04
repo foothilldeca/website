@@ -40,7 +40,7 @@ jobs:
 
       - name: Add direct URL entry points
         run: |
-          for route in competitions officers classes membership contact; do
+          for route in shark-tank competitions officers classes membership contact; do
             mkdir -p "dist/$route"
             cp dist/index.html "dist/$route/index.html"
           done
