@@ -5,17 +5,14 @@ const GUIDE_URL = "https://drive.google.com/file/d/1ECVZLLyeaPCl1SnxaUnkX2T_3cgC
 
 const outcomes = [
   {
-    icon: "lightbulb",
     title: "Learn the basics",
     text: "Learn how entrepreneurs identify opportunities, define customer value, and turn problems into business ideas.",
   },
   {
-    icon: "panels-top-left",
     title: "Build your concept",
     text: "Work with Foothill DECA mentors to create a Lean Canvas, minimum viable product, and effective pitch deck.",
   },
   {
-    icon: "presentation",
     title: "Pitch to the sharks",
     text: "Present your solution to a live panel of judges, answer questions, and compete for DECA glass.",
   },
@@ -90,7 +87,7 @@ export function SharkTankPage() {
             </div>
           </div>
           <div className="shark-hero-photo">
-            <img src="/assets/minicon.jpg" alt="Students participating in a Foothill DECA event" />
+            <img src="/assets/shark-tank-cover.jpg" alt="Foothill DECA ICDC champions with their first-place award" />
             <div className="shark-photo-label">
               <Icon name="trophy" size={20} />
               Learn. Build. Pitch. Win.
@@ -126,11 +123,10 @@ export function SharkTankPage() {
             </p>
           </div>
           <div className="shark-outcomes">
-            {outcomes.map(({ icon, title, text }, index) => (
+            {outcomes.map(({ title, text }, index) => (
               <article className="shark-outcome" key={title}>
                 <div className="shark-outcome-top">
                   <span>0{index + 1}</span>
-                  <Icon name={icon} size={28} color="var(--deca-blue)" />
                 </div>
                 <h3>{title}</h3>
                 <p>{text}</p>
