@@ -19,6 +19,85 @@ html,body{margin:0;padding:0;background:var(--white);}
 .kit-field:focus{outline:none;border-color:var(--deca-blue);box-shadow:0 0 0 3px rgba(0,102,204,.15);}
 a{transition:color var(--dur-fast) var(--ease-out);}
 
+/* NorCal */
+.norcal-hero{position:relative;overflow:hidden;background:linear-gradient(125deg,#003b6f 0%,#0064b4 62%,#0086d8 100%);padding:76px 0 86px;color:#fff;}
+.norcal-hero-mark{position:absolute;right:-80px;top:-120px;width:540px;opacity:.07;transform:rotate(-8deg);}
+.norcal-hero-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.norcal-kicker,.norcal-eyebrow{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;}
+.norcal-kicker{color:rgba(255,255,255,.82);margin-bottom:18px;}
+.norcal-eyebrow{display:block;color:var(--deca-blue);margin-bottom:12px;}
+.norcal-hero h1{font-size:clamp(50px,6vw,76px);line-height:1.02;color:#fff;margin:0;}
+.norcal-hero p{max-width:650px;font-size:19px;line-height:1.62;color:rgba(255,255,255,.88);margin:24px 0 0;}
+.norcal-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;}
+.norcal-action{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:4px;padding:13px 22px;background:#fff;color:var(--deca-blue-dark);font-weight:700;font-size:15px;transition:all .2s ease;}
+.norcal-action:hover{color:var(--deca-blue-darker);transform:translateY(-2px);box-shadow:var(--shadow-lg);}
+.norcal-action.secondary{border:1px solid rgba(255,255,255,.72);color:#fff;background:rgba(255,255,255,.07);}
+.norcal-action.secondary:hover{color:#fff;background:rgba(255,255,255,.15);}
+.norcal-hero-photo{position:relative;min-height:400px;border-radius:14px;overflow:hidden;box-shadow:0 26px 70px rgba(0,30,70,.34);}
+.norcal-hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;}
+.norcal-facts-wrap{position:relative;margin-top:-34px;z-index:2;}
+.norcal-facts{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid var(--color-border);box-shadow:var(--shadow-lg);border-radius:12px;padding:20px 24px;}
+.norcal-fact{display:flex;align-items:center;gap:12px;padding:8px 18px;border-right:1px solid var(--color-border);}
+.norcal-fact:last-child{border-right:none;}
+.norcal-fact strong,.norcal-fact span{display:block;}
+.norcal-fact strong{font-size:15px;color:var(--color-heading);}
+.norcal-fact span{font-size:13px;color:var(--gray-600);margin-top:3px;}
+.norcal-section{padding:88px 0;}
+.norcal-alt{background:var(--color-bg-alt);}
+.norcal-intro-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:70px;align-items:center;}
+.norcal-intro-grid h2,.norcal-section-heading h2,.norcal-contact h2{font-size:clamp(34px,4vw,48px);line-height:1.1;margin:0;color:var(--color-heading);}
+.norcal-intro-grid>div>p,.norcal-section-heading p{font-size:17px;line-height:1.7;color:var(--gray-600);margin:20px 0 0;}
+.norcal-deadline-card{background:var(--deca-blue-darker);color:#fff;border-radius:14px;padding:34px;box-shadow:var(--shadow-lg);}
+.norcal-deadline-card h3{font-size:25px;color:#fff;margin:18px 0 12px;}
+.norcal-deadline-card p{font-size:16px;line-height:1.6;color:rgba(255,255,255,.84);margin:0 0 18px;}
+.norcal-deadline-card strong{display:block;color:#fff;font-size:15px;}
+.norcal-section-heading{text-align:center;max-width:790px;margin:0 auto 42px;}
+.norcal-form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+.norcal-form-card,.norcal-training-card,.norcal-info-card{background:#fff;border:1px solid var(--color-border);border-radius:12px;box-shadow:var(--shadow-sm);}
+.norcal-form-card{padding:28px;}
+.norcal-form-label{display:inline-flex;background:var(--deca-blue-light);color:var(--deca-blue);font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;border-radius:999px;}
+.norcal-form-card h3,.norcal-training-card h3,.norcal-info-card h3{font-size:21px;color:var(--color-heading);margin:16px 0 10px;}
+.norcal-form-card p,.norcal-training-card p,.norcal-info-card p{font-size:15.5px;line-height:1.62;color:var(--gray-600);margin:0;}
+.norcal-form-card>a,.norcal-info-card>a{display:inline-flex;align-items:center;gap:6px;color:var(--deca-blue);font-weight:700;font-size:14px;margin-top:18px;}
+.norcal-form-card>a:hover,.norcal-info-card>a:hover{text-decoration:underline;}
+.norcal-submission-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;}
+.norcal-panel{background:#fff;border:1px solid var(--color-border);border-radius:12px;padding:32px;box-shadow:var(--shadow-sm);}
+.norcal-panel h3{font-size:24px;color:var(--color-heading);margin:0 0 20px;}
+.norcal-checklist{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;list-style:none;margin:0;padding:0;}
+.norcal-checklist li{display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.45;color:var(--gray-800);}
+.norcal-checklist li>span{flex:none;margin-top:2px;}
+.norcal-panel-blue{background:var(--deca-blue-darker);color:#fff;border:none;}
+.norcal-panel-blue h3{color:#fff;}
+.norcal-panel-blue p,.norcal-panel-blue ol{color:rgba(255,255,255,.84);font-size:15px;line-height:1.6;}
+.norcal-panel-blue ol{padding-left:20px;margin:18px 0 0;}
+.norcal-panel-blue li+li{margin-top:8px;}
+.norcal-payment{display:flex;align-items:center;gap:13px;background:rgba(255,255,255,.1);border-radius:9px;padding:16px;margin-top:24px;}
+.norcal-payment strong,.norcal-payment span{display:block;}
+.norcal-payment strong{font-size:17px;}
+.norcal-payment span{font-size:13px;color:rgba(255,255,255,.72);margin-top:2px;}
+.norcal-training-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.norcal-training-card{padding:26px;}
+.norcal-date-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--color-border);border:1px solid var(--color-border);border-radius:12px;overflow:hidden;margin-top:24px;}
+.norcal-date-strip>div{background:var(--color-bg-alt);padding:18px 20px;}
+.norcal-date-strip strong,.norcal-date-strip span{display:block;}
+.norcal-date-strip strong{font-size:14px;color:var(--deca-blue);}
+.norcal-date-strip span{font-size:13px;color:var(--gray-600);margin-top:3px;}
+.norcal-schedule-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.norcal-day-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:var(--shadow-sm);}
+.norcal-day-number{background:var(--deca-blue);color:#fff;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:13px 24px;}
+.norcal-day-card h3{font-size:21px;color:var(--color-heading);margin:0;padding:24px 24px 18px;}
+.norcal-day-events{padding:0 24px 26px;}
+.norcal-day-events>div{padding:12px 0;border-top:1px solid var(--color-border);}
+.norcal-day-events strong,.norcal-day-events span{display:block;}
+.norcal-day-events strong{font-size:13px;color:var(--deca-blue);}
+.norcal-day-events span{font-size:14px;color:var(--gray-800);line-height:1.4;margin-top:3px;}
+.norcal-info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.norcal-info-card{padding:30px;}
+.norcal-contact{background:var(--deca-blue-light);padding:76px 0;text-align:center;}
+.norcal-contact p{max-width:720px;font-size:17px;line-height:1.65;color:var(--gray-600);margin:18px auto 24px;}
+.norcal-contact>a{display:inline-flex;align-items:center;gap:8px;background:var(--deca-blue);color:#fff;border-radius:4px;padding:13px 22px;font-weight:700;}
+.norcal-contact>a:hover{color:#fff;background:var(--deca-blue-dark);}
+
 /* hero diamond drift */
 @media (prefers-reduced-motion: no-preference){
   .hero-texture{animation:drift 26s ease-in-out infinite alternate;}
@@ -43,6 +122,12 @@ a{transition:color var(--dur-fast) var(--ease-out);}
   .footer-grid{grid-template-columns:1fr 1fr!important;}
   .comp-row{grid-template-columns:auto 1fr!important;}
   .comp-row>div:last-child{display:none;}
+  .norcal-hero-grid,.norcal-intro-grid{grid-template-columns:1fr;}
+  .norcal-hero-photo{min-height:360px;}
+  .norcal-facts{grid-template-columns:1fr 1fr;}
+  .norcal-fact:nth-child(2){border-right:none;}
+  .norcal-fact:nth-child(-n+2){border-bottom:1px solid var(--color-border);}
+  .norcal-training-grid,.norcal-info-grid{grid-template-columns:1fr 1fr;}
 }
 .learn-btn:hover{background:var(--deca-blue)!important;color:#fff!important;}
 @media (max-width:860px){
@@ -51,9 +136,19 @@ a{transition:color var(--dur-fast) var(--ease-out);}
 }
 @media (max-width:760px){
   .conf-card{grid-template-columns:1fr!important;}
+  .norcal-form-grid,.norcal-submission-grid,.norcal-schedule-grid{grid-template-columns:1fr;}
+  .norcal-date-strip{grid-template-columns:1fr 1fr;}
 }
 @media (max-width:560px){
   .feature-grid,.officer-grid,.bene-grid,.steps-grid{grid-template-columns:1fr!important;}
   .involve-grid{grid-template-columns:1fr!important;gap:40px!important;}
   .footer-grid{grid-template-columns:1fr!important;}
+  .norcal-hero{padding:56px 0 72px;}
+  .norcal-hero h1{font-size:46px;}
+  .norcal-hero-photo{min-height:270px;}
+  .norcal-facts,.norcal-training-grid,.norcal-info-grid,.norcal-date-strip{grid-template-columns:1fr;}
+  .norcal-fact,.norcal-fact:nth-child(2){border-right:none;border-bottom:1px solid var(--color-border);padding:14px 4px;}
+  .norcal-fact:last-child{border-bottom:none;}
+  .norcal-section{padding:66px 0;}
+  .norcal-checklist{grid-template-columns:1fr;}
 }

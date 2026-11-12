@@ -7,6 +7,7 @@ import { ContactPage } from "./components/ContactPage.jsx";
 import { MembershipPage } from "./components/MembershipPage.jsx";
 import { CompetitionsPage } from "./components/CompetitionsPage.jsx";
 import { ClassesPage } from "./components/ClassesPage.jsx";
+import { NorCalPage } from "./components/NorCalPage.jsx";
 
 const pageAliases = {
   home: "home",
@@ -17,6 +18,7 @@ const pageAliases = {
   training: "classes",
   membership: "membership",
   contact: "contact",
+  norcal: "norcal",
 };
 
 const pagePaths = {
@@ -26,6 +28,7 @@ const pagePaths = {
   classes: "/classes",
   membership: "/membership",
   contact: "/contact",
+  norcal: "/norcal",
 };
 
 const pathPages = Object.fromEntries(
@@ -67,8 +70,9 @@ export default function App() {
     case "officers": view = <OfficersPage />; break;
     case "contact": view = <ContactPage />; break;
     case "membership": view = <MembershipPage onNavigate={navigate} />; break;
-    case "competitions": view = <CompetitionsPage />; break;
+    case "competitions": view = <CompetitionsPage onNavigate={navigate} />; break;
     case "classes": view = <ClassesPage />; break;
+    case "norcal": view = <NorCalPage />; break;
     default: view = <HomePage onNavigate={navigate} />;
   }
 

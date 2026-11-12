@@ -2,11 +2,10 @@
 // (image left, details + Learn More right) but kept in the Foothill DECA theme:
 // blue accents, rounded corners, soft shadows (no orange / square edges).
 
-import { Section } from "./primitives.jsx";
+import { Button, Section } from "./primitives.jsx";
 import { PageBanner } from "./OfficersPage.jsx";
 
-// Each conference. `photo` is optional; drop a file in /assets and set the
-// path. `href` is the external conference page the "Learn More" button opens.
+// Each conference. `photo` is optional; drop a file in /assets and set the path.
 const CONFERENCES = [
   {
     name: "MiniCon",
@@ -18,10 +17,10 @@ const CONFERENCES = [
   },
   {
     name: "NorCal CDC",
-    when: "January 15–17, 2027",
-    where: "San Ramon, CA",
-    desc: "Start off your DECA year at the Northern California District Career Development Conference! Practice roleplays, assess your exam knowledge, and make long-lasting friendships. Compete against all DECA chapters in NorCal.",
-    href: "#",
+    when: "January 15-17, 2027",
+    where: "Santa Clara, CA",
+    desc: "Start off your DECA year at the Northern California Career Development Conference! Practice roleplays, assess your exam knowledge, and make long-lasting friendships. Compete against DECA chapters from across Northern California.",
+    page: "norcal",
     photo: "/assets/norcal.jpg",
   },
   {
@@ -42,7 +41,7 @@ const CONFERENCES = [
   },
 ];
 
-function ConferenceCard({ name, when, where, desc, photo }) {
+function ConferenceCard({ name, when, where, desc, photo, page, onNavigate }) {
   return (
     <div className="conf-card" style={{
       display: "grid", gridTemplateColumns: "minmax(0,360px) 1fr",
@@ -66,19 +65,24 @@ function ConferenceCard({ name, when, where, desc, photo }) {
           {where ? <> · {where}</> : null}
         </div>
         <p style={{ fontSize: 15.5, color: "var(--gray-800)", lineHeight: 1.6, margin: 0 }}>{desc}</p>
+        {page && (
+          <Button variant="secondary" arrow onClick={() => onNavigate(page)} style={{ marginTop: 22, padding: "10px 18px", fontSize: 15 }}>
+            View conference details
+          </Button>
+        )}
       </div>
     </div>
   );
 }
 
-export function CompetitionsPage() {
+export function CompetitionsPage({ onNavigate }) {
   return (
     <>
       <PageBanner eyebrow="Compete & Grow" title="Conferences & Competitions"
         subtitle="Our DECA year runs from a local MiniCon all the way to the international stage. Mark your calendars and compete with us." />
       <Section alt>
         <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
-          {CONFERENCES.map((c) => <ConferenceCard key={c.name} {...c} />)}
+          {CONFERENCES.map((c) => <ConferenceCard key={c.name} {...c} onNavigate={onNavigate} />)}
         </div>
       </Section>
     </>
