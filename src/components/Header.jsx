@@ -7,7 +7,6 @@ import { Icon, Button } from "./primitives.jsx";
 export function Header({ current, onNavigate }) {
   const [open, setOpen] = useState(false);
   const items = [
-    ["sharkTank", "Shark Tank"],
     ["competitions", "Competitions"],
     ["officers", "Officers"],
     ["classes", "Classes"],
