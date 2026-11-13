@@ -45,22 +45,19 @@ a{transition:color var(--dur-fast) var(--ease-out);}
 .norcal-section{padding:88px 0;}
 .norcal-alt{background:var(--color-bg-alt);}
 .norcal-intro-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:70px;align-items:center;}
-.norcal-intro-grid h2,.norcal-section-heading h2,.norcal-contact h2{font-size:clamp(34px,4vw,48px);line-height:1.1;margin:0;color:var(--color-heading);}
+.norcal-intro-grid h2,.norcal-section-heading h2{font-size:clamp(34px,4vw,48px);line-height:1.1;margin:0;color:var(--color-heading);}
 .norcal-intro-grid>div>p,.norcal-section-heading p{font-size:17px;line-height:1.7;color:var(--gray-600);margin:20px 0 0;}
 .norcal-deadline-card{background:var(--deca-blue-darker);color:#fff;border-radius:14px;padding:34px;box-shadow:var(--shadow-lg);}
 .norcal-deadline-card h3{font-size:25px;color:#fff;margin:18px 0 12px;}
 .norcal-deadline-card p{font-size:16px;line-height:1.6;color:rgba(255,255,255,.84);margin:0 0 18px;}
 .norcal-deadline-card strong{display:block;color:#fff;font-size:15px;}
 .norcal-section-heading{text-align:center;max-width:790px;margin:0 auto 42px;}
-.norcal-form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
-.norcal-form-card,.norcal-training-card,.norcal-info-card{background:#fff;border:1px solid var(--color-border);border-radius:12px;box-shadow:var(--shadow-sm);}
-.norcal-form-card{padding:28px;}
-.norcal-form-label{display:inline-flex;background:var(--deca-blue-light);color:var(--deca-blue);font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;border-radius:999px;}
-.norcal-form-card h3,.norcal-training-card h3,.norcal-info-card h3{font-size:21px;color:var(--color-heading);margin:16px 0 10px;}
-.norcal-form-card p,.norcal-training-card p,.norcal-info-card p{font-size:15.5px;line-height:1.62;color:var(--gray-600);margin:0;}
-.norcal-form-card>a,.norcal-info-card>a{display:inline-flex;align-items:center;gap:6px;color:var(--deca-blue);font-weight:700;font-size:14px;margin-top:18px;}
-.norcal-form-card>a:hover,.norcal-info-card>a:hover{text-decoration:underline;}
-.norcal-submission-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;}
+.norcal-training-card,.norcal-info-card{background:#fff;border:1px solid var(--color-border);border-radius:12px;box-shadow:var(--shadow-sm);}
+.norcal-training-card h3,.norcal-info-card h3{font-size:21px;color:var(--color-heading);margin:16px 0 10px;}
+.norcal-training-card p,.norcal-info-card p{font-size:15.5px;line-height:1.62;color:var(--gray-600);margin:0;}
+.norcal-info-card>a{display:inline-flex;align-items:center;gap:6px;color:var(--deca-blue);font-weight:700;font-size:14px;margin-top:18px;}
+.norcal-info-card>a:hover{text-decoration:underline;}
+.norcal-submission-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
 .norcal-panel{background:#fff;border:1px solid var(--color-border);border-radius:12px;padding:32px;box-shadow:var(--shadow-sm);}
 .norcal-panel h3{font-size:24px;color:var(--color-heading);margin:0 0 20px;}
 .norcal-checklist{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;list-style:none;margin:0;padding:0;}
@@ -93,10 +90,6 @@ a{transition:color var(--dur-fast) var(--ease-out);}
 .norcal-day-events span{font-size:14px;color:var(--gray-800);line-height:1.4;margin-top:3px;}
 .norcal-info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
 .norcal-info-card{padding:30px;}
-.norcal-contact{background:var(--deca-blue-light);padding:76px 0;text-align:center;}
-.norcal-contact p{max-width:720px;font-size:17px;line-height:1.65;color:var(--gray-600);margin:18px auto 24px;}
-.norcal-contact>a{display:inline-flex;align-items:center;gap:8px;background:var(--deca-blue);color:#fff;border-radius:4px;padding:13px 22px;font-weight:700;}
-.norcal-contact>a:hover{color:#fff;background:var(--deca-blue-dark);}
 
 /* hero diamond drift */
 @media (prefers-reduced-motion: no-preference){
@@ -136,7 +129,7 @@ a{transition:color var(--dur-fast) var(--ease-out);}
 }
 @media (max-width:760px){
   .conf-card{grid-template-columns:1fr!important;}
-  .norcal-form-grid,.norcal-submission-grid,.norcal-schedule-grid{grid-template-columns:1fr;}
+  .norcal-submission-grid,.norcal-schedule-grid{grid-template-columns:1fr;}
   .norcal-date-strip{grid-template-columns:1fr 1fr;}
 }
 @media (max-width:560px){

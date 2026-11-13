@@ -7,33 +7,6 @@ const FACTS = [
   ["clock-3", "November 16", "Due before lunch ends"],
 ];
 
-const FORMS = [
-  {
-    name: "Form E-1",
-    title: "TVROP Field Trip Authorization",
-    text: "Print the form, write your name, and collect teacher signatures for Periods 1-6. The remaining trip information is already completed.",
-    href: "https://bit.ly/formE-1",
-  },
-  {
-    name: "Form E-2",
-    title: "TVROP Student Medical Authorization",
-    text: "Download and type every required field before printing. Include complete medical and insurance information with no blanks.",
-    href: "https://bit.ly/formE-2",
-  },
-  {
-    name: "Form B",
-    title: "California DECA Permission and Medical Release",
-    text: "Complete the fillable form online, then print the required signature page. Follow every instruction in the registration packet.",
-    href: "https://bit.ly/DECAFormB",
-  },
-  {
-    name: "Form G",
-    title: "PUSD Field Trip Authorization",
-    text: "Complete the fillable form online and print it with all required information and signatures.",
-    href: "https://bit.ly/FormG27",
-  },
-];
-
 const CHECKLIST = [
   "Foothill DECA Registration Form",
   "Form A: Conference Rules and Etiquette",
@@ -164,19 +137,6 @@ export function NorCalPage() {
             <p>All required files and the electronic upload form are posted in Google Classroom. Use the packet instructions for every signature and required field.</p>
           </div>
 
-          <div className="norcal-form-grid">
-            {FORMS.map((form) => (
-              <article className="norcal-form-card" key={form.name}>
-                <div className="norcal-form-label">{form.name}</div>
-                <h3>{form.title}</h3>
-                <p>{form.text}</p>
-                <a href={form.href} target="_blank" rel="noreferrer">
-                  Open fillable form <Icon name="external-link" size={15} />
-                </a>
-              </article>
-            ))}
-          </div>
-
           <div className="norcal-submission-grid">
             <div className="norcal-panel">
               <h3>Forms checklist</h3>
@@ -279,14 +239,6 @@ export function NorCalPage() {
         </div>
       </section>
 
-      <section className="norcal-contact">
-        <div className="container">
-          <span className="norcal-eyebrow">Questions?</span>
-          <h2>Check Google Classroom first</h2>
-          <p>Google Classroom contains the official forms, electronic submission links, and current conference updates. For questions that are not answered there, contact Mrs. Raaker.</p>
-          <a href="mailto:traaker@pleasantonusd.net">Email Mrs. Raaker <Icon name="mail" size={17} /></a>
-        </div>
-      </section>
     </>
   );
 }
