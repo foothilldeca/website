@@ -1,7 +1,7 @@
 // Ported verbatim from ui_kits/website/HomePage.jsx; inline styles & CSS
 // values unchanged; only the window-global / Lucide plumbing is swapped.
 
-import { Section, Eyebrow, Icon, Button, DiamondWatermark } from "./primitives.jsx";
+import { Icon, Button, DiamondWatermark } from "./primitives.jsx";
 import { Hero } from "./Hero.jsx";
 
 const FEATURES = [
@@ -69,29 +69,6 @@ export function HomePage({ onNavigate }) {
           </div>
         </div>
       </section>
-
-      {/* Community: deca.org-style split card (navy text panel + full-bleed photo) */}
-      <Section>
-        <div className="community-card" style={{
-          display: "grid", gridTemplateColumns: "minmax(0,0.92fr) minmax(0,1.08fr)",
-          borderRadius: 24, overflow: "hidden", boxShadow: "var(--shadow-lg)", background: "#13294d",
-        }}>
-          <div style={{ background: "#13294d", padding: "64px 56px",
-            display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center" }}>
-            <span style={{ display: "inline-block", background: "var(--deca-blue)", color: "#fff",
-              fontSize: 13, fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase",
-              padding: "7px 16px", borderRadius: 999, marginBottom: 24 }}>Our community</span>
-            <h2 style={{ color: "#fff", fontSize: 44, lineHeight: 1.1, margin: "0 0 20px" }}>More than a club</h2>
-            <p style={{ color: "rgba(255,255,255,.8)", fontSize: 17, lineHeight: 1.65, margin: 0, maxWidth: 440 }}>
-              Foothill DECA brings together students who want to do more. Through competition, service, and leadership, you'll build the confidence and connections that carry into college and career.
-            </p>
-          </div>
-          <div style={{ position: "relative", minHeight: 460 }}>
-            <img src="/assets/states-full-chapter.jpg" alt="Foothill DECA chapter at the State Career Development Conference"
-              style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} />
-          </div>
-        </div>
-      </Section>
 
       {/* CTA band */}
       <section style={{ background: "var(--gradient-hero)", position: "relative", overflow: "hidden" }}>

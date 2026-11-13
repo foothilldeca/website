@@ -123,10 +123,6 @@ a{transition:color var(--dur-fast) var(--ease-out);}
   .norcal-training-grid,.norcal-info-grid{grid-template-columns:1fr 1fr;}
 }
 .learn-btn:hover{background:var(--deca-blue)!important;color:#fff!important;}
-@media (max-width:860px){
-  .community-card{grid-template-columns:1fr!important;}
-  .community-card>div:last-child{min-height:300px!important;}
-}
 @media (max-width:760px){
   .conf-card{grid-template-columns:1fr!important;}
   .norcal-submission-grid,.norcal-schedule-grid{grid-template-columns:1fr;}
